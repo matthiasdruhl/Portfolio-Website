@@ -1,25 +1,27 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Homepage from "./Components/Homepage";
-import Sidebar from "./Components/Sidebar";
-import Navbar from "./Components/Navbar";
+import Homepage from "./pages/Homepage";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Navbar from "./components/Navbar/Navbar";
+import CLI from "./pages/CLI";
 
 function App() {
   return (
-    <div className="h-screen w-screen bg-gray-100 overflow-hidden">
+    <div className="h-screen flex w-screen bg-sidebar overflow-hidden">
       <Router>
-        {/* Top Navbar */}
-        <Navbar />
+       
+        <Sidebar />
+        
 
-        <div className="flex h-full">
-          {/* Sidebar on the left */}
-          <Sidebar />
+        <div className="flex flex-col flex-1 h-full">
+          <Navbar />
+          
 
           {/* Main content area for routed components */}
           <div className="flex-1 overflow-y-auto">
             <Routes>
-              <Route path="/" element={<Homepage />} />
+              <Route path="/" element={<CLI />} />
               {/* Add other routes here */}
             </Routes>
           </div>
