@@ -1,26 +1,56 @@
 // src/data/homepageData.ts
 import { FaInstagram, FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa";
-import { ProjectItem } from '../types/project'; // Adjust path
-import { SocialLinkItem } from '../types/social'; // Adjust path
-import { Job } from '../types/job'; // Adjust path if you moved Job interface
+import { ProjectItem } from '../types/project';
+import { SocialLinkItem } from '../types/social';
+import { Job } from '../types/job';
 
 export const projectsData: ProjectItem[] = [
-  { name: 'Project 1', skills: 'Project Skills Used', link: 'https://example.com/project1' },
-  { name: 'Project 2', skills: 'Skills Used', link: 'https://example.com/project2' },
-  { name: 'Project 3', skills: 'Skills Used', link: 'https://example.com/project3' },
-  // Add more projects here
+  { 
+    name: 'UniLease', 
+    skills: 'GoLang, AWS, React, Tailwind CSS, Docker, MongoDB, Redis', 
+    link: '/text-viewer?path=/txtFIles/Projects/UniLease.txt'
+  },
+  { 
+    name: 'Qwyse Resume Generator', 
+    skills: 'React, Typescript, Azure Ai Studio, SQL, Node.js', 
+    link: '/text-viewer?path=/txtFIles/Projects/AIResume.txt'
+  },
+  { 
+    name: 'Buzzify', 
+    skills: 'Spotify API, Kotlin, Android Studio, Java, Firebase', 
+    link: '/text-viewer?path=/txtFIles/Projects/Buzzify.txt'
+  },
+
+  { 
+    name: 'College Planning App', 
+    skills: 'Kotlin, Android Studio, Java, Firebase', 
+    link: '/text-viewer?path=/txtFIles/Projects/CollegePlan.txt'
+  },
+  
 ];
 
 export const jobsData: Job[] = [
-  { organization: 'United States Air Force', role: 'EDDGE Software Engineering Intern' },
-  { organization: 'United States Air Force', role: '402 SWEG Software Engineering Intern' },
-  { organization: 'Georgia Tech Research Institute', role: 'Student Intern' },
+  { 
+    organization: 'EDDGE - United States Air Force', 
+    role: 'Software Engineering Intern',
+    filePath: '/txtFIles/Experience/EddgeRAFB.txt'
+  },
+  { 
+    organization: '402 SWEG - United States Air Force', 
+    role: 'Software Engineering Intern',
+    filePath: '/txtFIles/Experience/402SwegRAFB.txt'
+  },
+  { 
+    organization: 'Georgia Tech Research Institute', 
+    role: 'Student Intern',
+    filePath: '/txtFIles/Experience/GTRI.txt'
+  },
   // Add more jobs here
 ];
 
 export const socialLinksData: SocialLinkItem[] = [
-  { name: 'LinkedIn', url: 'https://linkedin.com/yourprofile', icon: FaLinkedin },
-  { name: 'GitHub', url: 'https://github.com/yourprofile', icon: FaGithub },
-  { name: 'Instagram', url: 'https://instagram.com/yourprofile', icon: FaInstagram },
-  { name: 'Email', url: 'mailto:youremail@example.com', icon: FaEnvelope },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/matthias-druhl', icon: FaLinkedin },
+  { name: 'GitHub', url: 'https://github.com/matthiasdruhl/', icon: FaGithub },
+  { name: 'Instagram', url: 'https://www.instagram.com/matthias_druhl/', icon: FaInstagram },
+  { name: 'Email', url: 'mailto:matthiasdruhl@gmail.com', icon: FaEnvelope },
 ];

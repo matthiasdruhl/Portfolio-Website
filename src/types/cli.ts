@@ -4,5 +4,5 @@ export interface FileNode {
   name: string;
   children?: FileNode[];
   content?: string; // For files
-  date: string;
+  status?: string;
 }

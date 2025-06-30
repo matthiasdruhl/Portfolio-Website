@@ -1,0 +1,79 @@
+About Me
+========
+
+I'm Matthias Druhl, a Computer Science student at Georgia Tech specializing in Information Internetworks and Intelligence. My passion lies at the intersection of software development and problem-solving, where I can create impactful solutions that make a difference.
+
+--------------
+
+Technical Skills
+--------------
++Programming Languages:
+• Python - Advanced proficiency in data analysis, AI/ML, and automation
+• JavaScript/TypeScript - Full-stack web development with modern frameworks
+• Java - Object-oriented programming and enterprise applications
+• C/C++ - Systems programming and performance-critical applications
+
++Web Development:
+• Frontend: React, HTML5, CSS3, Tailwind CSS
+• Backend: Node.js, Express, Flask
+• Databases: SQL, MongoDB
+• Version Control: Git, GitHub
+
++Tools & Technologies:
+• Development: Docker
+• Cloud Services: AWS, Google Cloud Platform
+• CI/CD: GitHub Actions, Jenkins
+• Testing: Jest, PyTest
+
++AI/ML & Data:
+• Machine Learning frameworks: TensorFlow, PyTorch
+• Data Analysis: Pandas, NumPy
+• Data Visualization: Matplotlib, Plotly
+• Natural Language Processing
+
+------------------
+Technical Background
+------------------
+• Proficient in full-stack development with experience in modern web technologies
+• Strong foundation in data structures, algorithms, and software design principles
+• Experience with AI/ML concepts and their practical applications
+• Skilled in both individual and collaborative development environments
+
+---------------------
+Professional Experience
+---------------------
+• EDDGE - United States Air Force: Working on cutting-edge defense technology solutions
+• 402 SWEG - United States Air Force: Contributing to critical software engineering projects
+• Georgia Tech Research Institute: Research and development in advanced computing systems
+
+--------
+Projects
+--------
+• UniLease: Developing a college sublease application to solve real-world housing challenges
+• Qwyse Resume Generator: Creating an AI-powered tool to help people craft better resumes
+• Buzzify: Building a Spotify Wrapped generator for enhanced music analytics
+• College Planning App: Designing tools to help students navigate their academic journey
+• USA Public Transportation Calculator: Creating solutions for better transit planning
+• Battleship Game: Implementing classic games with modern technology
+
+----------------
+Interests & Goals
+----------------
+• Software Engineering and System Design
+• Artificial Intelligence and Machine Learning
+• Web Development and User Experience
+• Problem-solving and Algorithm Design
+ --
+My goal is to leverage technology to create meaningful solutions that positively impact people's lives. I'm always eager to learn new technologies and approaches, and I enjoy tackling complex problems that require innovative thinking.
+
+--------------
+Connect With Me
+--------------
+Feel free to reach out through my social links or connect with me on professional platforms. I'm always interested in discussing technology, potential collaborations, or new opportunities.
+
+
+
+
+
+
+

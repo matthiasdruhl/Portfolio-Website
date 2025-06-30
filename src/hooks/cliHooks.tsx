@@ -1,23 +1,18 @@
 import { useState } from 'react';
-import { fileSystem } from '../data/cliData.ts';
-import { FileNode } from '../types/cli.ts';
-import { PathHistory } from '../types/paths.ts';
+import { fileSystem } from '../data/cliData';
+import { FileNode } from '../types/cli';
+import { PathHistory } from '../types/paths';
 
-
-export const useCli = () => {
+export function useCli() {
   const [history, setHistory] = useState<PathHistory[]>([]);
   const [currentNode, setCurrentNode] = useState<FileNode>(fileSystem);
   const [currentPath, setCurrentPath] = useState<string>(fileSystem.name);
 
   const handleOptionSelect = (node: FileNode) => {
-
     if (node.type === 'folder') {
-      
-      
       setCurrentNode(node);
       const nextPath = currentPath === fileSystem.name ? `${fileSystem.name}\\${node.name}` : `${currentPath}\\${node.name}`;
       setCurrentPath(nextPath);
-
     } 
     
     const newHistoryEntry: PathHistory = {
@@ -51,4 +46,4 @@ export const useCli = () => {
   };
 
   return { history, currentNode, currentPath, handleOptionSelect, handleGoBack };
-};
+}

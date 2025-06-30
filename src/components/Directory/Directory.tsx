@@ -1,21 +1,25 @@
 import React from "react";
 import { DirectoryProps } from "../../types/directory";
 
-export const Directory: React.FC<DirectoryProps> = ({node, onSelect}: DirectoryProps) => {
+export const Directory: React.FC<DirectoryProps> = ({ node, onSelect }) => {
+    const isFolder = node.type === 'folder';
+    
     return (
-        <button key={node.id} onClick={() => onSelect(node)} className="flex w-full">
-            <div className="flex w-full justify-between text-left">
-                <span className="w-1/3 ">
-                    {node.type === 'folder' && "d-----"}
-                    {node.type === 'file' && "-a----"}
+        <button 
+            onClick={() => onSelect(node)} 
+            className="flex w-full hover:bg-gray-700 px-2 py-1 rounded transition-colors text-left"
+        >
+            <div className="grid grid-cols-3 gap-4 w-full">
+                <span className="text-gray-400">
+                    {isFolder ? "d-----" : "-a----"}
                 </span>
-                <span className="w-1/3">
-                    {node.date}
+                <span className="text-gray-400">
+                    {node.status || "---------"}
                 </span>
-                <span className="w-1/3">
+                <span className={isFolder ? "text-blue-400" : "text-gray-300"}>
                     {node.name}
                 </span>
             </div>
         </button>
     );
-}
+};

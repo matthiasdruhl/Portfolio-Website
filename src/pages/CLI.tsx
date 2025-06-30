@@ -1,28 +1,48 @@
 import React, { useEffect, useRef } from 'react';
-
 import { Prompt } from '../components/Prompt/Prompt';
-import { useCli } from '../hooks/cliHooks';
-
+import { useCLI } from '../context/CLIContext';
+import { useFiles } from '../context/FileContext';
+import { useNavigate } from 'react-router-dom';
+import { FileNode } from '../types/cli';
 
 const CLI = () => {
-  const { history, currentNode, currentPath, handleOptionSelect, handleGoBack } = useCli();
+  const { 
+    history, 
+    currentNode, 
+    currentPath, 
+    handleOptionSelect, 
+    handleGoBack
+  } = useCLI();
+  const { addOpenFile } = useFiles();
+  const navigate = useNavigate();
   const endOfHistoryRef = useRef<HTMLDivElement>(null);
- 
- 
 
   useEffect(() => {
     endOfHistoryRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [history]);
 
-
+  const handleFileSelect = (node: FileNode) => {
+    if (node.type === 'file') {
+      if (node.name.endsWith('.pdf')) {
+        const path = '/resume';
+        addOpenFile({ name: 'Resume', path });
+        navigate(path);
+      } else if (node.name.endsWith('.txt')) {
+        const path = `/text-viewer?path=${encodeURIComponent(node.content || '')}`;
+        addOpenFile({ name: node.name, path });
+        navigate(path);
+      }
+    } else {
+      handleOptionSelect(node);
+    }
+  };
 
   return (
-    <div className="bg-sidebar min-h-[calc(100vh-3rem)] font-mono pb-2 text-base text-gray-200 pt-1 p-4 flex overflow-y-auto" >
+    <div className="bg-background min-h-[calc(100vh-3rem)] font-mono pb-2 text-base text-gray-200 pt-1 p-4 flex overflow-y-auto" >
       <div className="max-w-4xl h-fill flex flex-col pt-1 overflow-scrollable">
         <div>Matthias Druhl</div>
         <div>Copyright (C) Matthias Druhl. All rights reserved.</div>
         <div className='my-4'>Click on a path to navigate into it. Select the .. at the bottom of the list go back one folder.</div>
-        
         
         {/* History Section */}
         <div>
@@ -35,7 +55,6 @@ const CLI = () => {
                 <span className='mx-2 text-yellow-400'>{"cd"}</span>
                 <span className="text-gray-100">{entry.command}</span>
               </div>
-      
             </div>
           ))}
         </div>
@@ -44,7 +63,7 @@ const CLI = () => {
         <Prompt
           node={currentNode} 
           path={currentPath} 
-          onSelect={handleOptionSelect} 
+          onSelect={handleFileSelect} 
           onBack={handleGoBack} 
         />
 
