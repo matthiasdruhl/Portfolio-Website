@@ -1,59 +1,68 @@
-<<<<<<< HEAD
-# website
-Personal website portfolio
-=======
-# React + TypeScript + Vite
+# Matthias Druhl
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Computer Science student at Georgia Institute of Technology with a passion for software engineering and innovative technology solutions.
 
-Currently, two official plugins are available:
+## About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I'm a software engineering intern at the United States Air Force, currently working on cutting-edge AI and computer vision projects. My experience spans from autonomous vehicle navigation systems to AI-powered web applications, with a focus on creating practical solutions that solve real-world problems.
 
-## Expanding the ESLint configuration
+## Current Work
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**EDDGE Team - United States Air Force** (May 2025 - Present)
+- Software Engineering Intern - Team Lead
+- Leading development of an AI-powered microcontroller instruction generator
+- Working with RAG-augmented LLM architecture and Docker containerization
+- Building full-stack applications with real-time synchronization
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Previous Experience
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**402 Software Engineering Group - United States Air Force** (June 2023 - August 2024)
+- Software Engineering Intern
+- Developed autonomous vehicle navigation systems using computer vision
+- Achieved 92% accuracy in object detection with YOLO and Roboflow
+- Completed projects 40% ahead of schedule using Agile methodology
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Education
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
->>>>>>> 81ffa34 (Push from laptop)
+**Georgia Institute of Technology**
+- Bachelor of Science in Computer Science
+- Information Infonetworks/Intelligence Threads
+- Expected Graduation: December 2026
+- GPA: 3.03
+
+## Key Projects
+
+**AppliTrack - Automated Job Application Tracker**
+- Full-stack job tracking platform with AI-powered email parsing
+- Chrome extension with universal job detection capabilities
+- Integrated Gmail, Outlook, and Google Gemini AI APIs
+
+**Qwyse Resume Generator**
+- AI-powered resume generation tool
+- Team Lead and Full Stack Developer
+- Azure AI Studio integration with LaTeX editing
+
+**UniLease - College Sublease App**
+- Full-stack application for college housing
+- GoLang backend with React frontend
+- AWS, Docker, MongoDB, Redis
+
+## Technical Skills
+
+**Languages & Frameworks**: Python, JavaScript, TypeScript, React, Node.js, Go, Rust
+**AI & Machine Learning**: YOLO, Roboflow, Google Gemini AI, Azure AI Studio
+**Databases**: PostgreSQL, MongoDB, SQLite, Redis
+**Tools & Platforms**: Docker, AWS, Git, Agile/Scrum
+**Specializations**: Computer Vision, Embedded Systems, Full-Stack Development
+
+## Contact
+
+- LinkedIn: [matthias-druhl](https://linkedin.com/in/matthias-druhl)
+- GitHub: [matthiasdruhl](https://github.com/matthiasdruhl/)
+- Email: matthiasdruhl@gmail.com
+
+## Portfolio Website
+
+This repository contains my interactive portfolio website built with React and TypeScript. It features a unique file system interface where my experience and projects are represented as Python classes, demonstrating both my technical skills and innovative approach to problem-solving.
+
+The website showcases my work through an interactive file explorer, CLI terminal, and professional tab management system - all designed to provide an engaging way to explore my background and capabilities.
