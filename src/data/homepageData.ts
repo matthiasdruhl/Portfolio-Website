@@ -26,11 +26,7 @@ export const projectsData: ProjectItem[] = [
     link: '/text-viewer?path=/pyFiles/Projects/Buzzify.py'
   },
 
-  { 
-    name: 'College Planning App', 
-    skills: 'Plan out your Classes', 
-    link: '/text-viewer?path=/pyFiles/Projects/CollegePlan.py'
-  },
+
   
   
 ];
@@ -46,11 +42,7 @@ export const jobsData: Job[] = [
     role: 'Software Engineering Intern',
     filePath: '/pyFiles/Experience/402SWEG.py'
   },
-  { 
-    organization: 'Georgia Tech Research Institute', 
-    role: 'Student Intern',
-    filePath: '/pyFiles/Experience/GTRI.py'
-  },
+
   // Add more jobs here
 ];
 
