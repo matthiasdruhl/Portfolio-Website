@@ -103,10 +103,10 @@ export const fileSystem: FileNode = {
           ]
         },
         { 
-          id: 'Qwyse Resume Generator',
+          id: 'Qwyse Resume Assistant',
           type: 'folder',
           status: 'Complete',
-          name: 'Qwyse Resume Generator',
+          name: 'Qwyse Resume Assistant',
           children: [
             { id: 'resume-generator-readme', type: 'file', name: 'AIResume.py', content: '/pyFiles/Projects/AIResume.py' },
           ]
@@ -130,12 +130,12 @@ export const fileSystem: FileNode = {
           ]
         },
         {
-          id: "AppliTrack",
+          id: "AppliTrackr",
           type: 'folder',
           status: "Complete",
-          name: "AppliTrack - Automated Job Application Tracker",
+          name: "AppliTrackr - Automated Job Application Tracker",
           children: [
-            { id: 'applitrack-readme', type: 'file', name: 'AppliTrack.py', content: '/pyFiles/Projects/AppliTrack.py' },
+            { id: 'applitrackr-readme', type: 'file', name: 'AppliTrackr.py', content: '/pyFiles/Projects/AppliTrackr.py' },
           ]
         },
       ],
