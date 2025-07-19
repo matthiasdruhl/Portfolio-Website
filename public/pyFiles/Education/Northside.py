@@ -58,16 +58,3 @@ class NorthsideHighSchool(Education):
         """Get only AP courses with scores"""
         return [course for course in self.courses if course.startswith("AP")]
     
-    def get_ap_score_average(self) -> float:
-        """Calculate average AP score"""
-        ap_courses = self.get_ap_courses()
-        if not ap_courses:
-            return 0.0
-        
-        scores = []
-        for course in ap_courses:
-            if "Score:" in course:
-                score = int(course.split("Score:")[1].strip())
-                scores.append(score)
-        
-        return sum(scores) / len(scores) if scores else 0.0

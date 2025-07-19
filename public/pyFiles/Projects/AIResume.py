@@ -1,9 +1,9 @@
 from Project import Project
 
-class AIResume(Project):
+class QwyseResume(Project):
     def __init__(self):
         super().__init__(
-            name="AI Resume Generator",
+            name="Qwyse Resume Generator",
             status="Completed",
             dates="August 2024 - May 2025",
             role="Team Lead and Full Stack Developer",

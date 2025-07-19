@@ -4,7 +4,7 @@ import ".././index.css"; // Global styles
 import React from "react";
 
 // Import data
-import { projectsData, jobsData, socialLinksData } from '../data/homapageData';
+import { projectsData, jobsData, socialLinksData } from '../data/homepageData';
 
 // Import Section Components
 import SocialsSection from '../components/sections/SocialsSections';

@@ -12,6 +12,8 @@ import Resume from "./pages/Resume";
 import { CLIProvider } from "./context/CLIContext";
 import { FileNode } from "./types/cli";
 import { fileSystem } from './data/cliData';
+import ErrorBoundary from "./components/ErrorBoundary";
+import { ROUTES } from "./constants";
 
 const AppContent = () => {
   const [isFileExplorerOpen, setIsFileExplorerOpen] = useState(true);
@@ -22,11 +24,11 @@ const AppContent = () => {
   const handleFileSelect = (file: FileNode) => {
     if (file.type === 'file') {
       if (file.name.endsWith('.pdf')) {
-        const path = '/resume';
+        const path = ROUTES.RESUME;
         addOpenFile({ name: 'Resume', path });
         navigate(path);
-      } else if (file.name.endsWith('.txt')) {
-        const path = `/text-viewer?path=${encodeURIComponent(file.content || '')}`;
+      } else if (file.name.endsWith('.py')) {
+        const path = `${ROUTES.TEXT_VIEWER}?path=${encodeURIComponent(file.content || '')}`;
         addOpenFile({ name: file.name, path });
         navigate(path);
       }
@@ -85,10 +87,10 @@ const AppContent = () => {
             
             <div className="flex-1 overflow-y-auto">
               <Routes>
-                <Route path="/" element={<Homepage />} />
-                <Route path="/cli" element={<CLI />} />
-                <Route path="/text-viewer" element={<TextFileViewer />} />
-                <Route path="/resume" element={<Resume />} />
+                <Route path={ROUTES.HOME} element={<Homepage />} />
+                <Route path={ROUTES.CLI} element={<CLI />} />
+                <Route path={ROUTES.TEXT_VIEWER} element={<TextFileViewer />} />
+                <Route path={ROUTES.RESUME} element={<Resume />} />
               </Routes>
             </div>
           </div>
@@ -100,11 +102,13 @@ const AppContent = () => {
 
 const App = () => {
   return (
-    <Router>
-      <FileProvider>
-        <AppContent />
-      </FileProvider>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <FileProvider>
+          <AppContent />
+        </FileProvider>
+      </Router>
+    </ErrorBoundary>
   );
 };
 

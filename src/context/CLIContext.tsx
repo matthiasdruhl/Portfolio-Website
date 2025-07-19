@@ -3,6 +3,7 @@ import { FileNode } from '../types/cli';
 import { PathHistory } from '../types/paths';
 import { fileSystem } from '../data/cliData';
 import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '../constants';
 
 interface CLIContextType {
   openFolders: Set<string>;
@@ -77,9 +78,9 @@ export const CLIProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
       
       // Navigate based on file extension using React Router
       if (node.name.endsWith('.pdf')) {
-        navigate('/resume');
-      } else if (node.name.endsWith('.txt')) {
-        navigate(`/text-viewer?path=${encodeURIComponent(node.content || '')}`);
+        navigate(ROUTES.RESUME);
+      } else if (node.name.endsWith('.py')) {
+        navigate(`${ROUTES.TEXT_VIEWER}?path=${encodeURIComponent(node.content || '')}`);
       }
     }
   };

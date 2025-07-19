@@ -17,6 +17,7 @@ const Tab: React.FC<TabProps> = ({ name, path, isActive, onClose, showClose }) =
       <Link
         to={path}
         className="flex-1 h-full flex items-center justify-center min-w-0"
+        aria-label={`Open ${name}`}
       >
         <div className="flex items-center  pl-1 justify-center w-full h-full">
           <span className="text-white truncate text-sm whitespace-nowrap overflow-hidden text-center">{name}</span>
@@ -30,6 +31,7 @@ const Tab: React.FC<TabProps> = ({ name, path, isActive, onClose, showClose }) =
             onClose?.();
           }}
           className="h-full px-2 hover:bg-gray-600 text-gray-400 hover:text-white flex-shrink-0"
+          aria-label={`Close ${name}`}
         >
           ✕
         </button>

@@ -3,6 +3,7 @@ import React from 'react';
 import { Job } from '../../types/job'; // Assuming you have a Job type defined in types/job.ts
 import { useFiles } from '../../context/FileContext';
 import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '../../constants';
 
 
 // Or, if you prefer to use the Job interface directly for props:
@@ -16,10 +17,10 @@ const JobCard: React.FC<Job> = ({ organization, role, filePath }) => {
     e.preventDefault();
     if (filePath) {
       addOpenFile({ 
-        name: `${organization}.txt`, 
-        path: `/text-viewer?path=${encodeURIComponent(filePath)}` 
+        name: `${organization}.py`, 
+        path: `${ROUTES.TEXT_VIEWER}?path=${encodeURIComponent(filePath)}` 
       });
-      navigate(`/text-viewer?path=${encodeURIComponent(filePath)}`);
+      navigate(`${ROUTES.TEXT_VIEWER}?path=${encodeURIComponent(filePath)}`);
     }
   };
 

@@ -10,9 +10,9 @@ interface ProjectsSectionProps {
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
   return (
-    <div className="items-start gap-2 text-sm text-gray-200 mt-6">
+    <div className="items-start gap-4 sm:gap-2 text-sm text-gray-200 mt-6">
       <h1 className="text-xl">Projects</h1>
-      <div className="items-start mt-2 text-left text-xs flex flex-col">
+      <div className="items-start mt-4 sm:mt-2 text-left text-xs flex flex-col">
         {projects.map((project, index) => (
           <ProjectLink key={index} project={project} />
         ))}

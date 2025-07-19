@@ -6,6 +6,7 @@ const TextFileViewer: React.FC = () => {
   const [fileContent, setFileContent] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [filePath, setFilePath] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -14,6 +15,9 @@ const TextFileViewer: React.FC = () => {
     const contentPath = params.get('path');
 
     if (contentPath) {
+      setIsLoading(true);
+      setError('');
+      
       // Find the file node and build its path
       const findFileNode = (node: typeof fileSystem, targetPath: string, currentPath: string[] = []): string[] | null => {
         if (node.content === targetPath) {
@@ -44,52 +48,49 @@ const TextFileViewer: React.FC = () => {
         })
         .then(text => {
           setFileContent(text);
+          setIsLoading(false);
         })
         .catch(err => {
           setError('Error loading file: ' + err.message);
+          setIsLoading(false);
         });
     }
   }, [location]);
 
   const renderStyledLine = (line: string) => {
-    // Handle headers (lines starting with =)
-    if (line.startsWith('=')) {
-      return <h1 className="text-2xl font-bold text-blue-400 mb-4">{line.replace(/^=+/, '')}</h1>;
+    // Python syntax highlighting
+    if (line.trim().startsWith('#')) {
+      return <div className="text-green-400 font-mono">{line}</div>;
     }
     
-    // Handle section headers (lines starting with -)
-    if (line.startsWith('-')) {
-      return <h2 className="text-xl font-semibold text-blue-300 mb-3">{line.replace(/^-+/, '')}</h2>;
+    if (line.trim().startsWith('class ') || line.trim().startsWith('def ')) {
+      return <div className="text-blue-400 font-mono font-semibold">{line}</div>;
     }
     
-    // Handle bullet points
-    if (line.startsWith('•')) {
-      return <div className="ml-8 text-gray-200">{line}</div>;
+    if (line.includes('import ') || line.includes('from ')) {
+      return <div className="text-purple-400 font-mono">{line}</div>;
     }
     
-    // Handle code blocks (lines starting with >)
-    if (line.startsWith('>')) {
-      return <div className="bg-gray-800 p-2 rounded font-mono text-sm text-gray-300">{line.substring(1)}</div>;
-    }
-
-    if (line.startsWith('+')) {
-      return <div className="ml-4 text-gray-200">{line.substring(1)}</div>;
+    if (line.includes('self.') || line.includes('super().')) {
+      return <div className="text-yellow-400 font-mono">{line}</div>;
     }
     
-    // Handle links [text](url)
-    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-    if (linkRegex.test(line)) {
-      return (
-        <div className="text-gray-200">
-          {line.replace(linkRegex, (_, text, url) => (
-            `<a href="${url}" class="text-blue-400 hover:text-blue-300 underline">${text}</a>`
-          ))}
-        </div>
-      );
+    if (line.includes('"""') || line.includes("'''")) {
+      return <div className="text-gray-300 font-mono italic">{line}</div>;
+    }
+    
+    // Handle string literals
+    if (line.includes('"') || line.includes("'")) {
+      return <div className="text-orange-400 font-mono">{line}</div>;
+    }
+    
+    // Handle numbers
+    if (/\d+/.test(line)) {
+      return <div className="text-cyan-400 font-mono">{line}</div>;
     }
     
     // Default text
-    return <div className="text-gray-200">{line}</div>;
+    return <div className="text-gray-200 font-mono">{line}</div>;
   };
 
   const renderContentWithLineNumbers = (content: string) => {
@@ -127,7 +128,14 @@ const TextFileViewer: React.FC = () => {
             {filePath}
           </div>
           <div className="text-gray-200 font-mono text-sm leading-relaxed">
-            {fileContent ? renderContentWithLineNumbers(fileContent) : 'Loading...'}
+            {isLoading ? (
+              <div className="flex items-center justify-center py-8">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+                <span className="ml-3 text-gray-400">Loading file...</span>
+              </div>
+            ) : (
+              fileContent ? renderContentWithLineNumbers(fileContent) : 'No content to display'
+            )}
           </div>
         </div>
       )}

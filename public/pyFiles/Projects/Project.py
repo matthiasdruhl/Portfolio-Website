@@ -7,7 +7,7 @@ class Project(ABC):
     Defines the common structure and interface that all projects must implement.
     """
     
-    def __init__(self, name: str, status: str, dates: str, role: str, description: str):
+    def __init__(self, name: str, status: str, dates: str, role: str, description: str, teamates: List[str], techStack: Dict[str, str], organization: str = None):
         """
         Initialize a project with common attributes.
         
@@ -17,21 +17,20 @@ class Project(ABC):
             dates (str): Project timeline (e.g., "January 2024 - May 2024")
             role (str): Your role in the project
             description (str): Brief description of the project
+            teamates (List[str]): List of team members
+            techStack (Dict[str, str]): Technology stack used in the project
+            organization (str, optional): Organization where the project was developed
         """
         self.name = name
         self.status = status
         self.dates = dates
         self.role = role
         self.description = description
-        self.organization: Optional[str] = None
-        self.teamates: List[str] = []
+        self.organization = organization
+        self.teamates = teamates
         self.features: Dict[str, str] = {}
-        self.techStack: Dict[str, str] = {}
-        self.challenges: Dict[str, str] = {}
-        self.github_link: Optional[str] = None
-        self.live_link: Optional[str] = None
-        self.impact: Dict[str, str] = {}
-        
+        self.techStack = techStack
+
     @abstractmethod
     def get_project_summary(self) -> str:
         """

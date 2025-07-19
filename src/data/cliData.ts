@@ -12,10 +12,20 @@ export const fileSystem: FileNode = {
       name: 'About_Me',
       children: [
         { id: "resume", type: "file", name: "resume.pdf", content: "/Matthias_Druhl_Resume.pdf" },
-        { id: "about_me readme", type: "file", name: "About_Me.txt", content: "/txtFIles/About/AboutMe.txt" },
+        { id: "about_me readme", type: "file", name: "AboutMe.py", content: "/pyFiles/AboutMe/AboutMe.py" },
       ]
     },
 
+    {
+      id: 'Base Classes',
+      type: 'folder',
+      name: 'Base_Classes',
+      children: [
+        { id: 'Project Base Class', type: 'file', name: 'Project.py', content: '/pyFiles/Projects/Project.py' },
+        { id: 'Education Base Class', type: 'file', name: 'Education.py', content: '/pyFiles/Education/Education.py' },
+        { id: 'Experience Base Class', type: 'file', name: 'Experience.py', content: '/pyFiles/Experience/Experience.py' },
+      ]
+    },
     
     {
       id: 'Education',
@@ -28,7 +38,7 @@ export const fileSystem: FileNode = {
           status: "In-progress",
           name: "Georgia Tech - B.S. Computer Science",
           children: [
-            { id: 'Georgia Tech Readme', type: 'file', name: 'Georgia_Tech.txt', content: '/txtFIles/Education/GeorgiaTech.txt' },
+            { id: 'Georgia Tech Readme', type: 'file', name: 'GeorgiaTech.py', content: '/pyFiles/Education/GeorgiaTech.py' },
           ]
         },
         {
@@ -37,7 +47,7 @@ export const fileSystem: FileNode = {
           status: "Complete",
           name: "Northside High School",
           children: [
-            { id: 'Northside High School Readme', type: 'file', name: 'Northside.txt', content: '/txtFIles/Education/Northside.txt' },
+            { id: 'Northside High School Readme', type: 'file', name: 'Northside.py', content: '/pyFiles/Education/Northside.py' },
           ]
         },
       ],
@@ -54,7 +64,7 @@ export const fileSystem: FileNode = {
           status: "In-progress",
           name: "EDDGE - United States Air Force",
           children: [
-            { id: 'EDDGE Readme', type: 'file', name: 'EDDGE_RAFB.txt', content: '/txtFIles/Experience/EddgeRAFB.txt' },
+            { id: 'EDDGE Readme', type: 'file', name: 'EddgeRAFB.py', content: '/pyFiles/Experience/EddgeRAFB.py' },
           ]
         },
         {
@@ -63,7 +73,7 @@ export const fileSystem: FileNode = {
           status: "In-progress",
           name: "402 SWEG - United States Air Force",
           children: [
-            { id: '402 SWEG Readme', type: 'file', name: '402_SWEG.txt', content: '/txtFIles/Experience/402SwegRAFB.txt' },
+            { id: '402 SWEG Readme', type: 'file', name: '402SWEG.py', content: '/pyFiles/Experience/402SWEG.py' },
           ]
         },
         {
@@ -72,7 +82,7 @@ export const fileSystem: FileNode = {
           status: "In-progress",
           name: "Georgia Tech Research Institute",
           children: [
-            { id: 'Georgia Tech Research Institute Readme', type: 'file', name: 'GTRI.txt', content: '/txtFIles/Experience/GTRI.txt' },
+            { id: 'Georgia Tech Research Institute Readme', type: 'file', name: 'GTRI.py', content: '/pyFiles/Experience/GTRI.py' },
           ]
         },
       ]
@@ -89,7 +99,7 @@ export const fileSystem: FileNode = {
           status: 'In-Progress',
           name: 'UniLease - College Sublease App',
           children: [
-            { id: 'unilease-readme', type: 'file', name: 'UniLease.txt', content: '/txtFIles/Projects/UniLease.txt' },
+            { id: 'unilease-readme', type: 'file', name: 'UniLease.py', content: '/pyFiles/Projects/UniLease.py' },
           ]
         },
         { 
@@ -98,7 +108,7 @@ export const fileSystem: FileNode = {
           status: 'Complete',
           name: 'Qwyse Resume Generator',
           children: [
-            { id: 'resume-generator-readme', type: 'file', name: 'Qwyse_Resume_Generator.txt', content: '/txtFIles/Projects/AIResume.txt' },
+            { id: 'resume-generator-readme', type: 'file', name: 'AIResume.py', content: '/pyFiles/Projects/AIResume.py' },
           ]
         },
         {
@@ -107,7 +117,7 @@ export const fileSystem: FileNode = {
           status: "Complete",
           name: "Buzzify - Spotify Wrapped Generator",
           children: [
-            { id: 'buzzify-readme', type: 'file', name: 'Buzzify.txt', content: '/txtFIles/Projects/Buzzify.txt' },
+            { id: 'buzzify-readme', type: 'file', name: 'Buzzify.py', content: '/pyFiles/Projects/Buzzify.py' },
           ]
         },
         {
@@ -116,7 +126,16 @@ export const fileSystem: FileNode = {
           status: "Complete",
           name: "College Planning App",
           children: [
-            { id: 'college-planning-app-readme', type: 'file', name: 'College_Planning_App.txt', content: '/txtFIles/Projects/CollegePlan.txt' },
+            { id: 'college-planning-app-readme', type: 'file', name: 'CollegePlan.py', content: '/pyFiles/Projects/CollegePlan.py' },
+          ]
+        },
+        {
+          id: "AppliTrack",
+          type: 'folder',
+          status: "Complete",
+          name: "AppliTrack - Automated Job Application Tracker",
+          children: [
+            { id: 'applitrack-readme', type: 'file', name: 'AppliTrack.py', content: '/pyFiles/Projects/AppliTrack.py' },
           ]
         },
       ],

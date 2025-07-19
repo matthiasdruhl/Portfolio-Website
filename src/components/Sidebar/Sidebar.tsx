@@ -3,32 +3,33 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { SidebarProps } from '../../types/sidebar';
 import { useFiles } from '../../context/FileContext';
 import { fileSystem } from '../../data/cliData';
+import { ROUTES } from '../../constants';
 
 const Sidebar: React.FC<SidebarProps> = ({ onToggleFileExplorer }) => {
     const location = useLocation();
     const navigate = useNavigate();
     const { addOpenFile } = useFiles();
     
-    // Find the About Me file in the file system
+    // Find the About Me file in the file system - updated to look for Python file
     const aboutMeFile = fileSystem.children
         ?.find(folder => folder.name === 'About_Me')
-        ?.children?.find(file => file.name === 'About_Me.txt');
+        ?.children?.find(file => file.name === 'AboutMe.py');
 
     const navItems = [
-        { name: 'Home', path: '/', icon: 'home' },
-        { name: 'Terminal', path: '/cli', icon: 'terminal' },
+        { name: 'Home', path: ROUTES.HOME, icon: 'home' },
+        { name: 'Terminal', path: ROUTES.CLI, icon: 'terminal' },
         { 
-            name: 'AboutMe.txt', 
-            path: `/text-viewer?path=${encodeURIComponent(aboutMeFile?.content || '')}`, 
+            name: 'AboutMe.py', 
+            path: `${ROUTES.TEXT_VIEWER}?path=${encodeURIComponent(aboutMeFile?.content || '')}`, 
             icon: 'description' 
         },
-        { name: 'Resume', path: '/resume', icon: 'article' }
+        { name: 'Resume', path: ROUTES.RESUME, icon: 'article' }
     ];
 
     const handleNavClick = (item: typeof navItems[0]) => {
         // Add file to open tabs if it's About Me or Resume
-        if (item.name === 'AboutMe.txt') {
-            addOpenFile({ name: 'AboutMe.txt', path: item.path });
+        if (item.name === 'AboutMe.py') {
+            addOpenFile({ name: 'AboutMe.py', path: item.path });
         } else if (item.name === 'Resume') {
             addOpenFile({ name: 'Resume', path: item.path });
         }
@@ -36,7 +37,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onToggleFileExplorer }) => {
     };
 
     const isActive = (item: typeof navItems[0]) => {
-        if (item.path.startsWith('/text-viewer')) {
+        if (item.path.startsWith(ROUTES.TEXT_VIEWER)) {
             // For text viewer pages, check both pathname and search params
             return location.pathname + location.search === item.path;
         }

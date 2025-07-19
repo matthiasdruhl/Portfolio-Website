@@ -4,6 +4,7 @@ import JobCard from '../JobCard/JobCard'; // Importing the JobCard component
 import { Job } from '../../types/job'; // Using the centralized type
 import { useFiles } from '../../context/FileContext';
 import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '../../constants';
 
 interface ExperienceSectionProps {
   jobs: Job[];
@@ -16,10 +17,10 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ jobs }) => {
   const handleGeorgiaTechClick = (e: React.MouseEvent) => {
     e.preventDefault();
     addOpenFile({ 
-      name: 'Georgia_Tech.txt', 
-      path: '/text-viewer?path=/txtFIles/Education/GeorgiaTech.txt'
+      name: 'GeorgiaTech.py', 
+      path: `${ROUTES.TEXT_VIEWER}?path=/pyFiles/Education/GeorgiaTech.py`
     });
-    navigate('/text-viewer?path=/txtFIles/Education/GeorgiaTech.txt');
+    navigate(`${ROUTES.TEXT_VIEWER}?path=/pyFiles/Education/GeorgiaTech.py`);
   };
 
   return (

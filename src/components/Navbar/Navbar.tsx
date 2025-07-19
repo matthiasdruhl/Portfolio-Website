@@ -2,6 +2,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Tab from './Tab';
+import { ROUTES } from '../../constants';
 
 interface NavbarProps {
   openFiles?: Array<{
@@ -16,15 +17,15 @@ const Navbar: React.FC<NavbarProps> = ({ openFiles = [], onCloseFile }) => {
   const navigate = useNavigate();
   
   const defaultTabs = [
-    { name: 'Home', path: '/' },
-    { name: 'Terminal', path: '/cli' }
+    { name: 'Home', path: ROUTES.HOME },
+    { name: 'Terminal', path: ROUTES.CLI }
   ];
 
   // Combine default tabs with open files
   const allTabs = [...defaultTabs, ...openFiles];
 
   const isTabActive = (tabPath: string) => {
-    if (tabPath === '/' || tabPath === '/cli') {
+    if (tabPath === ROUTES.HOME || tabPath === ROUTES.CLI) {
       return location.pathname === tabPath;
     }
     return location.pathname + location.search === tabPath;

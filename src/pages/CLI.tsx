@@ -4,6 +4,7 @@ import { useCLI } from '../context/CLIContext';
 import { useFiles } from '../context/FileContext';
 import { useNavigate } from 'react-router-dom';
 import { FileNode } from '../types/cli';
+import { ROUTES } from '../constants';
 
 const CLI = () => {
   const { 
@@ -24,11 +25,11 @@ const CLI = () => {
   const handleFileSelect = (node: FileNode) => {
     if (node.type === 'file') {
       if (node.name.endsWith('.pdf')) {
-        const path = '/resume';
+        const path = ROUTES.RESUME;
         addOpenFile({ name: 'Resume', path });
         navigate(path);
-      } else if (node.name.endsWith('.txt')) {
-        const path = `/text-viewer?path=${encodeURIComponent(node.content || '')}`;
+      } else if (node.name.endsWith('.py')) {
+        const path = `${ROUTES.TEXT_VIEWER}?path=${encodeURIComponent(node.content || '')}`;
         addOpenFile({ name: node.name, path });
         navigate(path);
       }
