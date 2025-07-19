@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Prompt } from '../components/Prompt/Prompt';
 import { useCLI } from '../context/CLIContext';
 import { useFiles } from '../context/FileContext';

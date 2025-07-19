@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { FileProvider, useFiles } from "./context/FileContext";
 
@@ -11,7 +11,7 @@ import TextFileViewer from "./pages/TextFileViewer";
 import Resume from "./pages/Resume";
 import { CLIProvider } from "./context/CLIContext";
 import { FileNode } from "./types/cli";
-import { fileSystem } from './data/cliData';
+
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ROUTES } from "./constants";
 

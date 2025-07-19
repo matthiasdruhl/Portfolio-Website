@@ -1,6 +1,6 @@
 // src/components/Navbar/Navbar.tsx
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Tab from './Tab';
 import { ROUTES } from '../../constants';
 
@@ -14,7 +14,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ openFiles = [], onCloseFile }) => {
   const location = useLocation();
-  const navigate = useNavigate();
+
   
   const defaultTabs = [
     { name: 'Home', path: ROUTES.HOME },
