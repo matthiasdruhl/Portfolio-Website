@@ -3,7 +3,7 @@ from Project import Project
 class QwyseResume(Project):
     def __init__(self):
         super().__init__(
-            name="Qwyse Resume Generator",
+            name="Qwyse Resume Assistant",
             status="Completed",
             dates="August 2024 - May 2025",
             role="Team Lead and Full Stack Developer",

@@ -7,30 +7,31 @@ import { Job } from '../types/job';
 export const projectsData: ProjectItem[] = [
   { 
     name: 'UniLease', 
-    skills: 'GoLang, AWS, React, Tailwind CSS, Docker, MongoDB, Redis', 
+    skills: 'Student Sub Leasing Marketplace', 
     link: '/text-viewer?path=/pyFiles/Projects/UniLease.py'
   },
   { 
-    name: 'Qwyse Resume Generator', 
-    skills: 'React, Typescript, Azure Ai Studio, SQL, Node.js', 
+    name: 'AppliTrackr', 
+    skills: 'Automated Job Application Tracker', 
+    link: '/text-viewer?path=/pyFiles/Projects/AppliTrackr.py'
+  },
+  { 
+    name: 'Qwyse Resume Assistant', 
+    skills: 'Ai Powered Resume Helper', 
     link: '/text-viewer?path=/pyFiles/Projects/AIResume.py'
   },
   { 
     name: 'Buzzify', 
-    skills: 'Spotify API, Kotlin, Android Studio, Java, Firebase', 
+    skills: 'Spotify Wrapped Generator', 
     link: '/text-viewer?path=/pyFiles/Projects/Buzzify.py'
   },
 
   { 
     name: 'College Planning App', 
-    skills: 'Kotlin, Android Studio, Java, Firebase', 
+    skills: 'Plan out your Classes', 
     link: '/text-viewer?path=/pyFiles/Projects/CollegePlan.py'
   },
-  { 
-    name: 'AppliTrack', 
-    skills: 'Node.js, React.js, TypeScript, PostgreSQL, Docker, Google Gemini AI', 
-    link: '/text-viewer?path=/pyFiles/Projects/AppliTrack.py'
-  },
+  
   
 ];
 
