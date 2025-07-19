@@ -1,0 +1,25 @@
+402 SWEG - United States Air Force
+================================
+
+---------------------
+My Role
+
+Software Engineering Intern
+• Duration: June 2023 - August 2024
+• Location: Robins Air Force Base, Georgia
+
+---
+Project
+
++ Aircraft Flare Dispensor
+• Developed key features for testing automatic flare release procdedures when targeted
+• Achieved successful deployement of flares on 99% of tests
+
++ Automoated Navigation through Computer Vision
+• Led implementation of a custom trained Computer Vision model allowing an automated vehicle navigate through varying terrains
+• Achieved a success rate of 92% when tested
+• Integrated with existing infared and ultrasonic sensors
+
+
+
+

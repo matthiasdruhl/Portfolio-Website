@@ -14,7 +14,18 @@ export default {
             },
             animation: {
                 blink: 'blink 1s step-end infinite',
-            }
+            },
+
+            colors: {
+                'background': 'rgb(40, 40, 42)', // code Editor
+                'sidebar': 'rgb(26, 26, 26)', // sidebar rgb(26, 25, 25)
+                'experience': 'rgb(46, 46, 46)', //rgb(40, 40, 41)
+                'button-hover': "#1177b5", //maybe bb
+                'tab-inactive': "#2d2d2d",
+                'vs-blue': "rgb(31, 109, 173) ", //rgb(31, 109, 173) \\\ Fonts: Windows: Typically Consolas, followed by 'Courier New' and then a generic monospace fallback.
+            },
+
+                    
         },
     },
     plugins: [],
