@@ -76,15 +76,7 @@ export const fileSystem: FileNode = {
             { id: '402 SWEG Readme', type: 'file', name: '402SWEG.py', content: '/pyFiles/Experience/402SWEG.py' },
           ]
         },
-        {
-          id: "Georgia Tech Research Institute",
-          type: "folder",
-          status: "In-progress",
-          name: "Georgia Tech Research Institute",
-          children: [
-            { id: 'Georgia Tech Research Institute Readme', type: 'file', name: 'GTRI.py', content: '/pyFiles/Experience/GTRI.py' },
-          ]
-        },
+        
       ]
     },
 
@@ -120,15 +112,7 @@ export const fileSystem: FileNode = {
             { id: 'buzzify-readme', type: 'file', name: 'Buzzify.py', content: '/pyFiles/Projects/Buzzify.py' },
           ]
         },
-        {
-          id: "College Planning App",
-          type: 'folder',
-          status: "Complete",
-          name: "College Planning App",
-          children: [
-            { id: 'college-planning-app-readme', type: 'file', name: 'CollegePlan.py', content: '/pyFiles/Projects/CollegePlan.py' },
-          ]
-        },
+      
         {
           id: "AppliTrackr",
           type: 'folder',
