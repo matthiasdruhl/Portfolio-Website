@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Directory } from '../Directory/Directory';
 import { PromptProps } from '../../types/prompt';
 

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FolderProps } from "../../types/folder";
 
 export const Folder = ({ node, onSelect, isOpen }: FolderProps) => {
