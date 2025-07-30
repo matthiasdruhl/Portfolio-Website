@@ -1,90 +1,81 @@
 from Experience import Experience
 from Projects.Project import Project
 
-class EddgeRAFB(Experience):
+class SWEG402(Experience):
     def __init__(self):
         super().__init__(
-            name="EDDGE Team - United States Air Force",
-            location="Macon, GA",
-            dates="May 2025 - Present",
-            role="Software Engineering Intern - Team Lead",
+            name="402 Software Engineering Group - United States Air Force",
+            location="Warner Robins, GA",
+            dates="June 2023 - August 2024",
+            role="Software Engineering Intern",
             project=Project(
-                name="Automated Microcontroller Instruction Generator (AMIG)",
-                status="In Progress",
-                dates="May 2025 - Present",
-                role="Team Lead and Full Stack Developer",
-                description="A web application that converts scanned PDFs containing microcontroller instructions into Rust code using a RAG-augmented LLM architecture with locally hosted Ollama instances. The system includes automated code validation and compilation through dedicated testing containers.",
+                name="Autonomous Vehicle Navigation System",
+                status="Completed",
+                dates="June 2023 - August 2024",
+                role="Computer Vision Engineer & Embedded Systems Developer",
+                description="Developed a comprehensive autonomous vehicle navigation system using computer vision and embedded systems for military applications. The system included real-time object detection, terrain analysis, and aircraft flare dispensing simulation.",
                 teamates=[
-                    "Development Team",
-                    "LLM Specialists",
-                    "DevOps Engineers"
+                    "Software Engineering Team",
+                    "Computer Vision Specialists",
+                    "Embedded Systems Engineers"
                 ],
                 techStack={
-                    "Frontend": "HTML/CSS/JavaScript",
-                    "Backend": "Flask/FastAPI",
-                    "Containerization": "Docker",
-                    "LLM": "Ollama (Local)",
-                    "Programming": "Rust, Python",
-                    "Architecture": "RAG (Retrieval Augmented Generation)",
-                    "Testing": "Rust Unit Testing",
-                    "Workflow": "Microservices"
+                    "Computer Vision": "YOLO, Roboflow",
+                    "Programming": "Python",
+                    "Embedded Systems": "Microcontrollers",
+                    "Development": "Agile Scrum",
+                    "Hardware": "Circuit Design, Control Systems"
                 },
                 organization="United States Air Force"
             ),
-            manager=["Dextor Buschor", "Neha Patel"]
+            manager=["Software Engineering Group Leadership"]
         )
         
         # Add specific achievements
         self.achievements = [
-            "Led development of a web application to convert scanned PDFs containing microcontroller instructions into Rust code leveraging a RAG-augmented, LLM architecture with locally hosted Ollama instances",
-            "Constructed a full-stack web application (HTML/CSS/JS frontend, Flask/FastAPI backend) comprising six interconnected Docker containers for efficient workflow management",
-            "Incorporated a dedicated Rust unit testing container to compile and validate LLM-generated code, guaranteeing functional output automatically"
+            "Engineered and deployed a YOLO-based computer vision model via Roboflow to enable autonomous vehicle navigation across diverse terrains, achieving real-time object detection with 92% accuracy",
+            "Collaborated in Agile Scrum sprints to build embedded system simulations, completing implementation 40% ahead of deadline",
+            "Designed and assembled microcontroller based circuits and programmed control systems in Python to simulate flare dispensing for military aircraft"
         ]
         
         # Add skills developed
         self.skills_developed = [
-            "Team Leadership",
-            "Full Stack Development",
-            "LLM Integration",
-            "RAG Architecture",
-            "Docker Containerization",
-            "Microservices Design",
-            "Rust Programming",
-            "Python Backend Development",
-            "Frontend Development (HTML/CSS/JS)",
-            "Automated Testing",
-            "DevOps Practices",
-            "PDF Processing",
-            "Code Generation",
-            "Microcontroller Systems"
+            "Computer Vision Development",
+            "YOLO Object Detection",
+            "Roboflow Platform",
+            "Embedded Systems Programming",
+            "Microcontroller Circuit Design",
+            "Python Programming",
+            "Agile Scrum Methodology",
+            "Military Software Development",
+            "Real-time Systems",
+            "Hardware-Software Integration"
         ]
         
         # Add technical details
         self.technical_details = {
-            "Architecture": "RAG-augmented LLM",
-            "Container Count": "6 interconnected Docker containers",
-            "LLM Platform": "Locally hosted Ollama instances",
-            "Code Generation": "PDF to Rust code conversion",
-            "Testing": "Automated Rust unit testing",
-            "Validation": "Automatic functional output guarantee",
-            "Workflow": "Efficient microservices management"
+            "Object Detection Accuracy": "92%",
+            "Implementation Speed": "40% ahead of deadline",
+            "Terrain Types": "Diverse terrains",
+            "System Type": "Real-time autonomous navigation",
+            "Hardware Integration": "Microcontroller-based circuits",
+            "Military Application": "Aircraft flare dispensing simulation"
         }
     
     def get_experience_summary(self) -> str:
-        return f"{self.role} at {self.name} in {self.location}. Leading development of an automated microcontroller instruction generator using RAG-augmented LLM architecture with Docker containerization and automated testing."
+        return f"{self.role} at {self.name} in {self.location}. Developed autonomous vehicle navigation systems using computer vision and embedded systems, achieving 92% object detection accuracy and completing projects 40% ahead of schedule."
     
     def get_achievements_summary(self) -> str:
-        return f"Key achievements: {len(self.achievements)} major accomplishments including LLM integration, full-stack development, and automated code validation system."
+        return f"Key achievements: {len(self.achievements)} major accomplishments including computer vision model deployment, embedded system development, and hardware integration."
     
     def get_technical_highlights(self) -> dict:
         return {
-            "LLM Integration": "RAG-augmented architecture with Ollama",
-            "Containerization": "6 interconnected Docker containers",
-            "Code Generation": "PDF to Rust conversion",
-            "Testing": "Automated Rust unit testing",
-            "Leadership": "Team Lead responsibilities",
-            "Full Stack": "HTML/CSS/JS frontend with Flask/FastAPI backend"
+            "Computer Vision": "YOLO-based object detection with 92% accuracy",
+            "Embedded Systems": "Microcontroller circuit design and programming",
+            "Development Process": "Agile Scrum methodology",
+            "Performance": "40% ahead of deadline implementation",
+            "Military Applications": "Aircraft flare dispensing simulation"
         }
     
     def get_skills_summary(self) -> str:
-        return f"Developed expertise in {len(self.skills_developed)} technical areas including LLM integration, containerization, and team leadership."
+        return f"Developed expertise in {len(self.skills_developed)} technical areas including computer vision, embedded systems, and military software development."
