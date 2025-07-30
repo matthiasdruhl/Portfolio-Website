@@ -10,10 +10,7 @@ class UniLease(Project):
             description="UniLease is a platform geared towards students to find and rent apartments from other students."
         )
         self.teamates = [
-            "Xavier Geno",
-            "Valentina Garcia",
-            "Andre Koga",
-            "Tony Nguyen"
+            "Solo Developer"
         ]
         self.features = {
             "Apartment Listing": "Students can list their apartments for rent",
